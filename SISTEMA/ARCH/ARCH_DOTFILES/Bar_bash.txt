@@ -1,0 +1,8 @@
+#!/bin/bash
+
+killall -q polybar
+
+MONITOR=DP-0 polybar -q emi-bar -c "${HOME}/.config/bspwm/rices/emilia/config.ini" &
+MONITOR=HDMI-0 polybar -q emi-bar -c "${HOME}/.config/bspwm/rices/emilia/config.ini" &
+
+
