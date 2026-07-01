@@ -14,3 +14,6 @@ Verifica continuamente la entrega de datos. Para verificar una conexion emplea e
 ## Protocolo UDP
 
 No verifica la entrega de datos
+
+## Puertos
+En total hay 65535
