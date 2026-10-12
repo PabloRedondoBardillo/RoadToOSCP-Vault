@@ -1,4 +1,21 @@
 
+### Ayuda
+
+```bash 
+man [comando]
+```
+Para obtener detalles de un comando
+
+```bash 
+info [comando]
+```
+Para obtener detalles de un comando
+
+```bash 
+apropos [temaEnIngles]
+```
+Muestra comandos relacionados con el tema
+
 ### Informacion del Entorno
 
 ```bash 
@@ -667,6 +684,7 @@ Para filtrar el contenido por una cadena en concreto en un archivo
 * *-i* Ignorar mayusculas
 * *-v* Filtro invertido, te muestra todo lo que no contiene
 * *-r ruta* Busca de forma recursiva en un directorio
+* *-o* Muestra unicamente las coincidencias (no la linea entera)
 * *-n* Muestra el numero de linea exacto donde encontro la cadena
 * *-w* Fuerza a que busque la cadena completa
 * *-A n* Muestra la linea encontrada y n lineas despues
@@ -701,16 +719,31 @@ Hace una sustitucion caracter a caracter, todos los primeros caracteres del prim
 * *-c* Invierte la seleccion en los conjunto
 
 ``` bash
-sed 'comando' archivo
+sed 'opciones' [orden];[orden];... archivo
 ```
-Ejecuta su comando sobre el archivo y lo devuelve por terminal(util para sustituciones y tratamiento de datos del archivo)
-* *s/buscar/reemplazar* Sustituye la primera coincidencia (linea)
-* *s/buscar/reemplazar/g* Sustituye todas las coincidencias de la misma linea
+Ejecuta su orden sobre el archivo y lo devuelve por terminal(util para sustituciones y tratamiento de datos del archivo)
+Las opciones pueden ser:
 * *-i* Para que se guarden los cambios en el archivo
 * *-i.end* Para que guarde los cambios en otro archivo
-* *nd* Para borrar n (o rango) lineas de un archivo
-* */eliminar/d* Para eliminar todas las lineas que la contengan
-* */^$/d* Para eliminar todas las lineas vacias
+* *-E* Usa regex extendidas
+* *-n* No muestra las lineas recorridas por defecto, importante ponerlo si solo se desea lo filtrado
+Las ordenes son de la forma \[selector\]X\[argumentos\]
+El selector puede ser:
+* *N* Numero de linea
+* *$* Ultima linea
+* */patron/* Patron o regex
+* *N,M* Rango numerico (desde la linea N hasta la M)
+* */p1/,/p2/* Rango por patrones (desde que encuentra p1 hasta que encuentra p2)
+* *N,/p/* Rango mixto (desde la linea N hasta que encuntra p)
+* *inicio~salto* Salta desde el inicio las veces especificadas
+* *\[orden\]!* Selector inverso
+Si la X es:
+* *p* Muestra lineas
+* *d* Omitir/Borrar lineas
+* *s* Sustitucion. Tiene como argumentos */busca/reemplaza/opciones/*. Las opciones pueden ser:
+	* *g* reemplaza globalmente, todas las veces de la misma linea
+	* *i* ignora mayusculas/minusculas
+* *y* Reemplaza caracter a caracter. Tiene como argumentos */conjunto1/conjunto2*
 
 ``` bash
 awk 'patron{accion}' archivo
@@ -719,6 +752,13 @@ Para procesar patrones, ideal para extraer columnas
 * *'{print $n}'* Muestra el argumento n
 * *'{print $NF}'* Muestra el ultimo argumento
 * *-F separador* Especificar el separador de argumento (por defecto el espacio)
+
+``` bash
+cut archivo
+```
+Permite trabajar con archivos de texto plano con formato de "tabla" o con separadores
+* *-d"delimitador"* Establece el delimitador, por defecto \t
+* *-fN* Extrae el campo N (numero) 
 
 ``` bash
 sponge archivo
@@ -741,7 +781,7 @@ Ordena
 ``` bash
 uniq
 ```
-Elimina lineas seguidas repetidas
+Elimina lineas repetidas si estan seguidas
 * *-c* Muestra cuantas veces se repite una linea
 * *-d* Muestra solo las lineas duplicadas
 * *-u* Muestra solo las lineas que no estaban duplicadas

@@ -9,7 +9,15 @@ El segundo sector permisos propietario (u): -rwx
 El tercer sector permisos grupo (g): -rwx
 El cuarto sector permisos otros (o): -rwx
 
-Podemos anadir el **sticky bit** a la carpeta de tal modo que si tenemos una carpeta con mas permisos que un archivo contenedor entonces el archivo se cine a sus permisos no a los de la carpeta. Hay que tener cuidad ya que hace que los archivos previamente ejecutados se queden en memoria en vez de pasar a disco o cerrarse por lo que un uso excesivo puede saturar la memoria RAM local. Suele ser ejecutado sobre carpetas que manejen archivos temporales como /tmp o /var/tmp. Se aplica incorporando una t a los permisos o un 1 en octal.
+r: permiso de lectura
+w: permiso de escritura
+x: permiso de ejecucion
+
+**Forma octal**:
+xxx xxx xxx
+Cada grupo de tres forma un numero en binario, si el permiso en dicho grupo esta activo es un uno, de lo contrario un 0. El pasar el numero al formato decimal otorga el numero del grupo, la union consecutiva de estos forma un numero de tres digitos que es el numero octal del permiso.
+
+Podemos anadir el **sticky bit** a la carpeta de tal modo que si tenemos una carpeta con mas permisos que un archivo contenedor entonces el archivo se cine a sus permisos no a los de la carpeta. Hay que tener cuidado ya que hace que los archivos previamente ejecutados se queden en memoria en vez de pasar a disco o cerrarse por lo que un uso excesivo puede saturar la memoria RAM local. Suele ser ejecutado sobre carpetas que manejen archivos temporales como /tmp o /var/tmp. Se aplica incorporando una t a los permisos o un 1 en octal.
 
 Permiso **suid** se aplica incorporando una s a los permisos o un 4 en octal. Permite termer los permisos del usuario de forma temporal, de modo que al ejecutar un binario se ejecute como si el propietario lo estuviera haciendo.
 

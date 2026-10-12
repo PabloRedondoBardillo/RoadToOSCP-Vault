@@ -27,16 +27,44 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "SISTEMA/ARCH/Configuracion.md",
+                "file": "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Bash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Configuracion"
+              "title": "Bash"
+            }
+          },
+          {
+            "id": "5615bbcc9aa8ee4b",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Comandos_basicos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Comandos_basicos"
+            }
+          },
+          {
+            "id": "14f37494359e9e60",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Comandos_basicos.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Comandos_basicos"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -56,7 +84,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "Files"
@@ -195,7 +225,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 291.5
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -209,12 +239,14 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "2efd38651265bc9a",
+  "active": "5615bbcc9aa8ee4b",
   "lastOpenFiles": [
+    "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Bash.md",
     "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Comandos_basicos.md",
-    "BASE_TEORICA/FASE_DE_ENUMERACION/ESTRATEGIAS_DE_ESCANEO/NMAP.md",
     "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Conceptos_teoricos.md",
+    "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/RegEx.md",
     "BASE_TEORICA/CONOCIMIENTOS_BASICOS/Redes.md",
+    "BASE_TEORICA/FASE_DE_ENUMERACION/ESTRATEGIAS_DE_ESCANEO/NMAP.md",
     "SISTEMA/ARCH/Configuracion.md",
     "SISTEMA/Dual_Boot_Configuracion.md",
     "CHEATSHEETS_Y_HERRAMIENTAS/Kitty-Cheat-Sheet.md",
