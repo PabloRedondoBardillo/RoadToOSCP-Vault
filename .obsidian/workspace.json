@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Comandos_basicos.md",
+                "file": "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Bash.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Comandos_basicos"
+              "title": "Bash"
             }
           },
           {
@@ -241,9 +241,9 @@
   },
   "active": "5615bbcc9aa8ee4b",
   "lastOpenFiles": [
-    "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Bash.md",
     "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Comandos_basicos.md",
     "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Conceptos_teoricos.md",
+    "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/Bash.md",
     "BASE_TEORICA/CONOCIMIENTOS_BASICOS/LINUX/RegEx.md",
     "BASE_TEORICA/CONOCIMIENTOS_BASICOS/Redes.md",
     "BASE_TEORICA/FASE_DE_ENUMERACION/ESTRATEGIAS_DE_ESCANEO/NMAP.md",
