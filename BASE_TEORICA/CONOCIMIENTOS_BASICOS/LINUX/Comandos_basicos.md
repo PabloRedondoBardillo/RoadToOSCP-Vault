@@ -151,6 +151,15 @@ Utiliza el protocolo ICMP enviando paquetes echo
 * *-i n* Controla la velocidad de paquete por segundo (n)
 * *-t n* Limita el ttl (n)
 * *-W n* Limita el tiempo de espera (n)
+``` bash
+netstat
+```
+Datos sobre el estado de la red
+
+``` bash
+ss
+```
+Datos sobre el estado de los sockets
 
 ``` bash
 nc [IP] [puerto]
@@ -186,7 +195,7 @@ ls [ruta]
 Para listar el contenido de una carpeta, es opcional ruta
 * *-l* Para ver los permisos (formato largo)
 * *-a* Para ver los archivos ocultos
-
+* *-i* Para ver los inodos
 ``` bash
 find ruta -name nombre
 ```
@@ -203,6 +212,11 @@ Para buscar un archivo en un directorio
 * *-nogroup* Para buscar por aquellos que no tengan grupo
 * *-nouser* Para buscar por aquellos que no tengan usuario
 * *-o* OR logico
+
+``` bash
+locate archivo
+```
+* Hay que tener la base de datos actualizada de locate por eso *sudo updatedb* antes de usarse
 
 ``` bash
 file archivo
@@ -542,7 +556,22 @@ lsblk
 Muestra las unidades de almacenamiento y particiones
 * *-f* Muestra el tipo de sistema de archivos y el UUID
 * *-p* Fuerza a mostrar las rutas absolutas completas a los dispositivos
-* *-o cols* Permite elegir solo las columnas que quieres separadas por comas
+* *-o NOMBRE_COLS* Permite elegir solo las columnas que quieres separadas por comas
+
+``` bash
+lsusb
+```
+Muestra las unidades USB y el bus por el que estan conectadas
+
+``` bash
+lsof
+```
+Muestra los archivos abiertos
+
+``` bash
+lspci
+```
+Muestra los dispositivos conectados por PCI
 
 ### Redirecciones y Descriptores de Archivos
 

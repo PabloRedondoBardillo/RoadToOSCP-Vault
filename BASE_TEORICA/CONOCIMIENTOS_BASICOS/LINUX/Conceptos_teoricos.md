@@ -70,7 +70,7 @@ Ver [[Comandos_basicos#Administracion de Usuarios y Permisos]]
 
 **/sys**: contiene informacion parecida a **/proc**, podemos encontrar todo nuestro kernel de forma estructurada.
 
-**/lost-found**: contiene archivos y directorios que hayan sido recuperados tras la caida del so.
+**/lost+found**: contiene archivos y directorios que hayan sido recuperados tras la caida del so.
 
 ## Archivos Especiales
 
